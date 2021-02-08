@@ -1,0 +1,14 @@
+body {
+    font-size: Verdana, Arial, sans-serif;
+}
+h1 {
+    color: red;
+    background-color: #87ceeb;
+}
+h2 {
+    color: green;
+    margin-left: 20px;
+}
+p {
+    margin-left: 240px;
+}
