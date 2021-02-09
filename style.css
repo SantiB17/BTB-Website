@@ -5,9 +5,19 @@ h1 {
     color: red;
     background-color: #87ceeb;
 }
+h1:hover{
+    color: #FFA500;
+    transition: all 700ms ease-in-out;
+    -moz-transition: all 700 ms ease-in-out;
+}
 h2 {
     color: green;
     margin-left: 20px;
+}
+h2:hover{
+    background-color: #000000;
+    transition: all 700ms ease-in-out;
+    -moz-transition: all 700ms ease-in-out;
 }
 p {
     margin-left: 240px;
