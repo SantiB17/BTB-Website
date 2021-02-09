@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Homepage</title>
+    <title>Skalp Kings Homepage</title>
         <link href="style.css" rel="stylesheet"/>
 </head>
-<body style="font-family: Verdana, Arial, sans-serif">
-    <h1>Welcome to Scalp Kings</h1>
-    <h2>Beating The Banks</h2>
-    <h1>One Trade at a Time</h1>
-    <h2>Learn Trading Fundamentals... no FOMO</h2>
-    <p>Let's get started my goats!</p>
+<body>
+    <h1 onclick="handleClick(this)">
+        Welcome to Scalp Kings
+    </h1>
+    <h2 onclick="handleClick(this)">
+        Beating The Banks</h2>
+    <h1 onclick="handleClick(this)">
+        One Trade at a Time
+    </h1>
+    <h2 onclick="handleClick(this)">
+         Trading Fundamentals... no FOMO</h2>
+    <script>
+        function handleClick(node) {
+            var value = node.getAttribute('class') || '';
+            value = value == '' ? 'clicked' : '';
+            node.setAttribute('class', value);
+        }
+    </script>
+
 </body>    
 </html>
