@@ -5,24 +5,30 @@
         <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-    <h1 onclick="handleClick(this)">
-        Welcome to Scalp Kings
-    </h1>
-    <h2 onclick="handleClick(this)">
-        Beating The Banks</h2>
-    <h1 onclick="handleClick(this)">
-        One Trade at a Time
-    </h1>
-    <h2 onclick="handleClick(this)">
-         Trading Fundamentals... no FOMO</h2>
+    <h1>Welcome to Scalp Kings</h1>
+    <div>
+    <h2>Beating The Banks</h2>
+    </div>
+    <h1>One Trade at a Time</h1>
+    <div>
+    <h2>Trading Fundamentals... no FOMO</h2>
+    </div>
     <p>Lets get started my goats!</p>
-    <script>
-        function handleClick(node) {
-            var value = node.getAttribute('class') || '';
-            value = value == '' ? 'clicked' : '';
-            node.setAttribute('class', value);
-        }
-    </script>
-
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        $('h1').prepend('<span class="node">-</span>');
+        $('h1').click(
+            function () {
+                var node = $(this).children('.node');
+                $(this).next().fadeToggle(500, 'swing',
+                    function () {
+                        var mark = node.text();
+                        mark = mark === '-' ? '+' : '-';
+                        node.text(mark);
+                    });
+            })
+    });
+</script>
 </body>    
 </html>

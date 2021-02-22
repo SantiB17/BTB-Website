@@ -5,6 +5,9 @@ body {
     color: white;
     background-color: black;
   }
+  h1 .node {
+      font-family: monospace;
+  }
   h1.clicked {
       color: #FFA500;
       background-color: navy;
@@ -12,7 +15,4 @@ body {
   h2 {
     color: green;
     margin-left: 40px;
-  }
-  h2.clicked {
-      background-color: red;
   }
